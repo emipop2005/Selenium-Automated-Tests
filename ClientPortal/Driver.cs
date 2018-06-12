@@ -20,7 +20,7 @@ namespace ClientPortal
         {
       
             Instance = new ChromeDriver(Parameters.chrome_Driver_Location);          
-           
+           /////asdasdasda
         //    Instance.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
 
           //  Instance = new FirefoxDriver();
