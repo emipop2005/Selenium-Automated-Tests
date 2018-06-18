@@ -13,6 +13,7 @@ namespace ClientPortalTests
     public class URLTests
 
     {
+
         [TestInitialize]
         public void Init()
         {
@@ -86,10 +87,11 @@ namespace ClientPortalTests
         [TestMethod]
         public void URL_Random_text_after_url()
         {
-
+            
             URL.GoTo(Parameters.production_URL_client_portal + "/asdasdasdasd");
-            Assert.IsTrue(Error404.IsAt, "[practice_name].accountantspace.co.uk did not load the ClientPortal Login page");
-            Error404.Revert_to_OC_login_page();
+            Error404 error = new Error404();
+            Assert.IsTrue(error.IsAt, "[practice_name].accountantspace.co.uk did not load the ClientPortal Login page");
+            error.Revert_to_OC_login_page();
             Thread.Sleep(5000);
             Assert.IsTrue(OneClick_LoginPage.IsAt, "OneClick login page is not loaded after clicking Take me back to dashboard");
         }
@@ -97,10 +99,11 @@ namespace ClientPortalTests
         [TestMethod]
         public void URL_Verify_Document()
         {
-
+           
             URL.GoTo(Parameters.production_URL_client_portal + "/asdasdasdasd");
-            Assert.IsTrue(Error404.IsAt, "[practice_name].accountantspace.co.uk did not load the ClientPortal Login page");
-            Error404.Revert_to_OC_login_page();
+            Error404 error = new Error404();
+            Assert.IsTrue(error.IsAt, "[practice_name].accountantspace.co.uk did not load the ClientPortal Login page");
+            error.Revert_to_OC_login_page();
             Thread.Sleep(5000);
             Assert.IsTrue(OneClick_LoginPage.IsAt, "OneClick login page is not loaded after clicking Take me back to dashboard");
 
