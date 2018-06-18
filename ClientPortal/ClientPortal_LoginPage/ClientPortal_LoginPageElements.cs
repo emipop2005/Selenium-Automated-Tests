@@ -13,9 +13,9 @@ namespace ClientPortal
         
         
         public static string url = "messages/Account/Login?ReturnUrl=%2Fmessages";
-        public static IWebElement user_name = Driver.Instance.FindElement(By.Id("UserName"));
-        public static IWebElement pass = Driver.Instance.FindElement(By.Id("Password"));
-        public static IWebElement login_button = Driver.Instance.FindElement(By.Id("btnLogin"));
+        public  IWebElement user_name = Driver.Instance.FindElement(By.Id("UserName"));
+        public  IWebElement pass = Driver.Instance.FindElement(By.Id("Password"));
+        public  IWebElement login_button = Driver.Instance.FindElement(By.Id("btnLogin"));
 
     }
 }

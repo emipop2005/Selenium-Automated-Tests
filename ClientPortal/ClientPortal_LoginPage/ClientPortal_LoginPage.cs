@@ -31,9 +31,10 @@ namespace ClientPortal
         {
             get
             {
-                
+                ClientPortal_LoginPageElements element = new ClientPortal_LoginPageElements();
                 Thread.Sleep(2000);
-                if (ClientPortal_LoginPageElements.pass.Displayed && ClientPortal_LoginPageElements.user_name.Displayed && Driver.Instance.Url.Contains(ClientPortal_LoginPageElements.url))
+
+                if (element.pass.Displayed && element.user_name.Displayed && Driver.Instance.Url.Contains(ClientPortal_LoginPageElements.url))
                     return true;
                 return false;
 
@@ -66,10 +67,13 @@ namespace ClientPortal
 
         public void Login()
         {
-          
-            ClientPortal_LoginPageElements.user_name.SendKeys(userName);
-            ClientPortal_LoginPageElements.pass.SendKeys(password);
-            ClientPortal_LoginPageElements.login_button.Click();
+            ClientPortal_LoginPageElements element = new ClientPortal_LoginPageElements();
+
+
+
+            element.user_name.SendKeys(userName);
+            element.pass.SendKeys(password);
+            element.login_button.Click();
 
 
 
